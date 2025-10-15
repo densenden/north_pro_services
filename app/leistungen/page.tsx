@@ -100,7 +100,7 @@ export default function LeistungenPage() {
                 <div className="flex-1">
                   <div className="relative rounded-xl h-80 overflow-hidden shadow-xl">
                     <div
-                      className="absolute inset-0 bg-cover bg-center"
+                      className="absolute inset-0 bg-cover bg-right"
                       style={{ backgroundImage: `url('${service.image}')` }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 to-transparent flex items-end justify-center p-6">
