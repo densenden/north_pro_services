@@ -314,10 +314,12 @@ export default function DesignExportPage() {
 
         {/* Additional Controls */}
         <div className="container-custom mt-6 flex justify-center gap-6 items-center">
-          {/* Export Button */}
-          <button onClick={exportSlide} className="btn-primary flex items-center gap-2">
-            <Icon name="download" className="text-2xl" />
-            Slide exportieren
+          {/* Export Button - Square */}
+          <button
+            onClick={exportSlide}
+            className="w-16 h-16 bg-primary-steel hover:bg-deep-navy text-white rounded-lg flex items-center justify-center transition-all shadow-lg"
+          >
+            <Icon name="download" className="text-3xl" />
           </button>
 
           {/* Slide Indicators */}

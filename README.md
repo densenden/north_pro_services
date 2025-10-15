@@ -1,368 +1,101 @@
-# North Pro Services - Website
+# North Pro Services
 
-🏢 **Professional cleaning and security services in Frankfurt am Main**
+![Next.js](https://img.shields.io/badge/Next.js-15.5-black?style=for-the-badge&logo=next.js)
+![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1-38bdf8?style=for-the-badge&logo=tailwind-css)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel)
 
-Modern, responsive web presence for North Pro Services including the NorthPatrol App showcase.
+🏢 **Professional cleaning and security services in Ulm, Germany**
 
-## 🌐 Live Demo
+Modern, responsive website for North Pro Services including NorthPatrol App showcase.
 
-The website is ready for deployment to Vercel. Simply:
-1. Push this repository to GitHub
-2. Import the project in Vercel Dashboard
-3. Deploy automatically
+## 🌐 Live URLs
 
-**Deployment URL**: Connect your Vercel account to auto-deploy
+- **Development:** [https://nps.sen.studio](https://nps.sen.studio)
+- **Production:** Coming soon
 
 ---
 
 ## ⚡ Tech Stack
 
-### Frontend Framework
-- **[Next.js 15.5](https://nextjs.org/)** - React framework with App Router
-- **[React 19](https://react.dev/)** - UI library
-- **[TypeScript 5.9](https://www.typescriptlang.org/)** - Type safety
+![Next.js](https://img.shields.io/badge/Next.js-15.5-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61dafb?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript)
+![Tailwind](https://img.shields.io/badge/Tailwind-4.1-38bdf8?logo=tailwind-css)
+![html2canvas](https://img.shields.io/badge/html2canvas-1.4-orange?logo=javascript)
 
-### Styling
-- **[Tailwind CSS 4.1](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[@tailwindcss/postcss](https://tailwindcss.com/docs/installation/postcss)** - PostCSS plugin
-- **Custom design system** - Brand colors & typography
-
-### Hosting & Deployment
-- **[Vercel](https://vercel.com/)** - Production hosting
-- **Automatic deployments** - Git-based workflow
-- **Global CDN** - Fast worldwide delivery
-
-### Development Tools
-- **PostCSS** - CSS processing
-- **ESM Modules** - Modern JavaScript
-- **Git** - Version control
+- **Next.js 15.5** - React framework
+- **React 19** - UI library
+- **TypeScript 5.9** - Type safety
+- **Tailwind CSS 4.1** - Styling
+- **html2canvas** - Design export
+- **Material Icons** - Icon library
+- **Poster Gothic** - Custom button font
 
 ---
 
 ## 🎨 Design System
 
-### Color Palette
-
-```css
-Primary Colors:
-  - Primary:       #2F4D5C (Dark Blue-Gray)
-  - Primary Dark:  #2A3D4A (Darker Slate)
-  - Primary Light: #758D9D (Cool Gray)
-
-Accent Colors:
-  - Accent:        #6B7F8F (Steel Blue)
-  - Accent Light:  #758D9D (Light Steel)
-
-Backgrounds:
-  - Light Mode:    #F9FAFB (Off-White)
-  - Dark Mode:     #0B0E11 (Near Black)
-```
+### Colors
+- Primary Steel: `#5B74A6`
+- Deep Navy: `#1E3340`
+- Ice White: `#F8F9FA`
 
 ### Typography
-- **Font Family**: Inter (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800
-- **Style**: Clean, modern, professional
+- Body: Inter (Google Fonts)
+- Buttons: Poster Gothic Cond ATF Medium
+
+### Signature Design
+- 45° corner cut-off on cards & buttons
+- Auto-detect dark mode
+- Microanimations on hover
 
 ---
 
-## 📁 Project Structure
+## 📄 Pages
 
-```
-NorthProServices/
-├── app/                          # Next.js App Router
-│   ├── page.tsx                 # Homepage
-│   ├── layout.tsx               # Root layout
-│   ├── globals.css              # Global styles + Tailwind
-│   ├── leistungen/              # Services page
-│   ├── app/                     # NorthPatrol App page
-│   ├── jobs/                    # Careers page
-│   ├── kontakt/                 # Contact page
-│   ├── styleguide/              # Design system showcase
-│   ├── impressum/               # Legal notice
-│   └── datenschutz/             # Privacy policy
-├── components/                   # React components
-│   ├── Navigation.tsx           # Site navigation
-│   └── Footer.tsx               # Site footer
-├── content/                      # Structured content (JSON)
-│   ├── home.json
-│   ├── leistungen.json
-│   ├── app.json
-│   └── jobs.json
-├── public/                       # Static assets
-│   ├── logos/                   # Brand logos
-│   └── images/                  # Hero & feature images
-├── package.json                  # Dependencies
-├── tsconfig.json                 # TypeScript config
-├── postcss.config.mjs            # PostCSS config
-└── next.config.ts                # Next.js config
-```
+- **/** - Homepage
+- **/about** - About Us (Pierre Fastrich)
+- **/leistungen** - Services
+- **/app** - NorthPatrol App
+- **/jobs** - Careers
+- **/kontakt** - Contact (Himmelweiler 7/1, 89081 Ulm)
+- **/styleguide** - Design system
+- **/design-export** - 13 PowerPoint slides (1920×1080)
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+
-- npm, yarn, pnpm, or bun
-
-### Installation
+## 🚀 Quick Start
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
+```
 
-# Build for production
+Visit [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 📦 Build
+
+```bash
 npm run build
-
-# Start production server
 npm start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
-
----
-
-## 📄 Pages Overview
-
-### 1. Homepage (`/`)
-- Hero section with CTAs
-- Services overview (4 cards)
-- NorthPatrol App teaser
-- Customer testimonials
-- Contact CTA
-
-### 2. Services (`/leistungen`)
-- Detailed service descriptions
-- Gebäudereinigung
-- Sicherheitsdienste
-- Hausmeisterservice
-- Sonderreinigungen
-
-### 3. NorthPatrol App (`/app`)
-- Digital patrol management
-- QR code checkpoints
-- Real-time reporting
-- Admin dashboard features
-
-### 4. Jobs (`/jobs`)
-- Current job openings
-- Company benefits
-- Online application form
-
-### 5. Contact (`/kontakt`)
-- Contact form
-- Location information
-- Business hours
-- Map integration placeholder
-
-### 6. Styleguide (`/styleguide`)
-- Color palette showcase
-- Typography examples
-- Button variants
-- Form elements
-- Grid system
-- Dark/Light mode toggle
-
----
-
-## 🎯 Features
-
-### ✅ Responsive Design
-- Mobile-first approach
-- Tablet & desktop optimized
-- Flexible grid system
-
-### ✅ Dark Mode Support
-- System preference detection
-- Manual toggle (styleguide)
-- Smooth transitions
-
-### ✅ Performance Optimized
-- Static generation
-- Optimized images
-- Minimal JavaScript
-- Fast page loads
-
-### ✅ SEO Ready
-- Semantic HTML
-- Meta tags configured
-- Sitemap ready
-- Accessibility focused
-
-### ✅ Type Safe
-- Full TypeScript coverage
-- Type-checked components
-- Enhanced DX
-
-### ✅ Modular Content
-- JSON-based content
-- Easy to update
-- Localization ready
-
----
-
-## 🛠️ Development
-
-### Available Scripts
-
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint (when configured)
-```
-
-### Environment Variables
-
-Create a `.env.local` file for local development:
-
-```env
-# Add environment variables as needed
-NEXT_PUBLIC_SITE_URL=https://northproservices.de
-```
-
----
-
-## 🚢 Deployment
-
-### Deploy to Vercel (Recommended)
-
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-2. **Import in Vercel**
-   - Visit [vercel.com/new](https://vercel.com/new)
-   - Import your GitHub repository
-   - Vercel auto-detects Next.js
-   - Click "Deploy"
-
-3. **Auto-deployments**
-   - Every `git push` triggers a new deployment
-   - Preview deployments for branches
-   - Production deployment from `main`
-
-### Alternative: Manual Deployment
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel --prod
-```
-
----
-
-## 📦 Dependencies
-
-### Production
-- `next` - React framework
-- `react` & `react-dom` - UI library
-- `typescript` - Type safety
-- `tailwindcss` - Styling
-- `@tailwindcss/postcss` - CSS processing
-
-### Development
-- `@types/node` - Node.js types
-- `@types/react` - React types
-- `@types/react-dom` - React DOM types
-
----
-
-## 🎨 Customization
-
-### Update Colors
-Edit `/app/globals.css`:
-```css
-@theme {
-  --color-primary: #2F4D5C;
-  --color-accent: #6B7F8F;
-  /* ... */
-}
-```
-
-### Update Content
-Edit JSON files in `/content/`:
-- `home.json` - Homepage content
-- `leistungen.json` - Services
-- `app.json` - NorthPatrol features
-- `jobs.json` - Job listings
-
-### Add Pages
-Create new folders in `/app/`:
-```bash
-app/
-└── neue-seite/
-    └── page.tsx
-```
-
----
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
----
-
-## 🤝 Contributing
-
-This is a private project for North Pro Services. For changes or updates:
-
-1. Create a feature branch
-2. Make your changes
-3. Test thoroughly
-4. Submit for review
-
----
-
-## 📄 License
-
-Proprietary - © 2025 North Pro Services. All rights reserved.
 
 ---
 
 ## 👨‍💻 Credits
 
 **Developed by:** Studio Sen (Denis)
-**Location:** Frankfurt am Main, Germany
+**Client:** North Pro Services GmbH
+**Location:** Ulm, Germany
 **Date:** October 2025
 
----
-
-## 📞 Support
-
-For technical support or questions about the website:
-- **Email:** kontakt@northproservices.de
-- **Location:** Frankfurt am Main
+**Managing Director:** Pierre Fastrich
+**Address:** Himmelweiler 7/1, 89081 Ulm
 
 ---
 
-## 🔄 Version History
-
-### v1.0.0 - October 2025
-- ✅ Initial release
-- ✅ Homepage with hero & services
-- ✅ Services detail page
-- ✅ NorthPatrol App showcase
-- ✅ Jobs & careers page
-- ✅ Contact form
-- ✅ Styleguide with design system
-- ✅ Dark mode support
-- ✅ Responsive design
-- ✅ Content JSON structure
-- ✅ Ready for Vercel deployment
-
----
-
-**Built with ❤️ in Frankfurt** 🇩🇪
+**Built with ❤️ in Ulm** 🇩🇪
