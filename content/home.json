@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "title": "Sicherheit & Sauberkeit für höchste Ansprüche",
+    "subtitle": "North Pro Services – Ihr Partner für professionelle Reinigungs- und Sicherheitslösungen",
+    "cta": {
+      "primary": "Jetzt unverbindlich anfragen",
+      "secondary": "Unsere Leistungen"
+    }
+  },
+  "services": [
+    {
+      "icon": "🏢",
+      "title": "Gebäudereinigung",
+      "description": "Professionelle Reinigung für Büros, Praxen und Objekte – individuell planbar"
+    },
+    {
+      "icon": "🛡️",
+      "title": "Sicherheitsdienste",
+      "description": "Objektschutz, Doorman, Streifendienst – geschult & zuverlässig"
+    },
+    {
+      "icon": "🔧",
+      "title": "Hausmeisterservice",
+      "description": "Wartung, Pflege, Kontrolle – aus einer Hand"
+    },
+    {
+      "icon": "✨",
+      "title": "Sonderreinigung",
+      "description": "Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt"
+    }
+  ],
+  "appTeaser": {
+    "title": "Rundgänge smart verwalten – mit der NorthPatrol App",
+    "description": "Kontrollgänge mit QR-Code-Checkpoints, Echtzeitberichte & Auswertungen.",
+    "cta": "Mehr erfahren über NorthPatrol"
+  },
+  "testimonials": [
+    {
+      "quote": "Zuverlässiger Service, immer pünktlich und gründlich. Sehr empfehlenswert!",
+      "author": "Geschäftsführer, Frankfurt"
+    },
+    {
+      "quote": "Die NorthPatrol App hat unsere Sicherheitsrundgänge revolutioniert. Transparenz pur!",
+      "author": "Facility Manager, Eschborn"
+    },
+    {
+      "quote": "Professionelles Team, faire Preise. Wir sind sehr zufrieden mit der Zusammenarbeit.",
+      "author": "Praxisleitung, Bad Homburg"
+    }
+  ],
+  "finalCta": {
+    "title": "Lassen Sie uns sprechen.",
+    "description": "Vereinbaren Sie noch heute Ihr Beratungsgespräch.",
+    "cta": "Termin vereinbaren"
+  }
+}

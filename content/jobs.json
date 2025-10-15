@@ -1,0 +1,62 @@
+{
+  "positions": [
+    {
+      "title": "Reinigungskraft",
+      "location": "Frankfurt am Main",
+      "type": "Teilzeit / Vollzeit",
+      "description": "Wir suchen zuverlässige Reinigungskräfte für verschiedene Objekte in Frankfurt.",
+      "requirements": [
+        "Zuverlässigkeit und Pünktlichkeit",
+        "Sorgfältige Arbeitsweise",
+        "Deutschkenntnisse von Vorteil",
+        "Erfahrung wünschenswert"
+      ]
+    },
+    {
+      "title": "Objektschützer (m/w/d)",
+      "location": "Frankfurt & Umgebung",
+      "type": "Vollzeit",
+      "description": "Für unseren Sicherheitsdienst suchen wir geschulte Objektschützer.",
+      "requirements": [
+        "§34a Sachkundeprüfung erforderlich",
+        "Einwandfreies Führungszeugnis",
+        "Teamfähigkeit und Zuverlässigkeit",
+        "Schichtbereitschaft"
+      ]
+    },
+    {
+      "title": "Hausmeister (m/w/d)",
+      "location": "Frankfurt am Main",
+      "type": "Vollzeit",
+      "description": "Für mehrere Wohnanlagen suchen wir erfahrene Hausmeister.",
+      "requirements": [
+        "Handwerkliches Geschick",
+        "Führerschein Klasse B",
+        "Selbstständige Arbeitsweise",
+        "Technisches Verständnis"
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "💰",
+      "title": "Faire Bezahlung",
+      "text": "Leistungsgerechte Vergütung"
+    },
+    {
+      "icon": "📅",
+      "title": "Flexibilität",
+      "text": "Familienfreundliche Arbeitszeiten"
+    },
+    {
+      "icon": "🎓",
+      "title": "Weiterbildung",
+      "text": "Schulungen und Entwicklung"
+    },
+    {
+      "icon": "🤝",
+      "title": "Teamgeist",
+      "text": "Kollegiales Arbeitsklima"
+    }
+  ]
+}

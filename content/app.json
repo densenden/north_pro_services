@@ -1,0 +1,78 @@
+{
+  "features": [
+    {
+      "icon": "📍",
+      "title": "20 Checkpoints mit QR-Codes",
+      "description": "Definierte Kontrollpunkte im gesamten Objekt"
+    },
+    {
+      "icon": "📊",
+      "title": "Admin-Dashboard",
+      "description": "Übersichtliche Auswertungen und Berichte"
+    },
+    {
+      "icon": "🔔",
+      "title": "Echtzeit-Benachrichtigungen",
+      "description": "Sofortige Meldung bei Abweichungen"
+    },
+    {
+      "icon": "✅",
+      "title": "Checklisten",
+      "description": "Strukturierte Kontrollen für jeden Checkpoint"
+    },
+    {
+      "icon": "🔒",
+      "title": "Datenschutzkonform",
+      "description": "DSGVO-konforme Datenspeicherung"
+    },
+    {
+      "icon": "📱",
+      "title": "Mobile & Desktop",
+      "description": "Zugriff von überall und jedem Gerät"
+    }
+  ],
+  "benefits": [
+    {
+      "icon": "👁️",
+      "title": "Transparenz",
+      "description": "Vollständige Dokumentation aller Rundgänge"
+    },
+    {
+      "icon": "⚡",
+      "title": "Effizienz",
+      "description": "Schnellere und präzisere Kontrollabläufe"
+    },
+    {
+      "icon": "🎯",
+      "title": "Qualitätssicherung",
+      "description": "Lückenlose Nachvollziehbarkeit"
+    },
+    {
+      "icon": "📋",
+      "title": "Compliance",
+      "description": "Erfüllung aller Dokumentationspflichten"
+    }
+  ],
+  "useCases": [
+    {
+      "icon": "🏢",
+      "title": "Bürogebäude",
+      "text": "Regelmäßige Sicherheitskontrollen"
+    },
+    {
+      "icon": "🏥",
+      "title": "Gesundheitseinrichtungen",
+      "text": "Hygiene- und Sicherheitsprotokolle"
+    },
+    {
+      "icon": "🏭",
+      "title": "Produktionsstätten",
+      "text": "Arbeitssicherheit und Compliance"
+    },
+    {
+      "icon": "🏪",
+      "title": "Einzelhandel",
+      "text": "Laden- und Objektschutz"
+    }
+  ]
+}

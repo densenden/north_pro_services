@@ -1,0 +1,74 @@
+{
+  "services": [
+    {
+      "icon": "🏢",
+      "title": "Gebäudereinigung",
+      "description": "Gründliche Reinigung für Büros, Praxen, Objekte – individuell planbar.",
+      "features": [
+        "Büroreinigung",
+        "Praxisreinigung",
+        "Treppenhausreinigung",
+        "Glasreinigung",
+        "Sanitärreinigung"
+      ]
+    },
+    {
+      "icon": "🛡️",
+      "title": "Sicherheitsdienste",
+      "description": "Objektschutz, Doorman, Streifendienst – geschult & zuverlässig.",
+      "features": [
+        "Objektschutz",
+        "Doorman Service",
+        "Streifendienst",
+        "Kontrolldienst",
+        "Veranstaltungsschutz"
+      ]
+    },
+    {
+      "icon": "🔧",
+      "title": "Hausmeisterservice",
+      "description": "Wartung, Pflege, Kontrolle – aus einer Hand.",
+      "features": [
+        "Wartungsarbeiten",
+        "Objektpflege",
+        "Grünflächenpflege",
+        "Winterdienst",
+        "Kleinreparaturen"
+      ]
+    },
+    {
+      "icon": "✨",
+      "title": "Sonderreinigungen",
+      "description": "Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt.",
+      "features": [
+        "Baureinigung",
+        "Grundreinigung",
+        "Fassadenreinigung",
+        "Desinfektion",
+        "Tatortreinigung"
+      ]
+    }
+  ],
+  "whyUs": [
+    {
+      "icon": "⭐",
+      "title": "Erfahrung",
+      "text": "Jahrelange Expertise im Facility Management"
+    },
+    {
+      "icon": "🎯",
+      "title": "Qualität",
+      "text": "Höchste Standards in allen Bereichen"
+    },
+    {
+      "icon": "💼",
+      "title": "Flexibilität",
+      "text": "Individuelle Lösungen für jeden Bedarf"
+    },
+    {
+      "icon": "🔒",
+      "title": "Zuverlässigkeit",
+      "text": "Pünktlich, diskret und vertrauenswürdig"
+    }
+  ]
+}
