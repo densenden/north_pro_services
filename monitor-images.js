@@ -13,29 +13,25 @@ const PROCESSED_FILE = path.join(__dirname, '.processed-images.json');
 // Extract expected filenames and their prompts from MIDJOURNEY_PROMPTS.md
 function extractExpectedFilenamesWithPrompts() {
   const content = fs.readFileSync(PROMPTS_FILE, 'utf8');
-  const sections = content.split(/##\s+/);
   const images = [];
 
-  for (const section of sections) {
-    // Find filename
-    const filenameMatch = section.match(/\*\*Filename:\*\*\s*`([^`]+)`/);
-    if (!filenameMatch) continue;
+  // Match each filename + prompt block pair using global regex
+  const pattern = /\*\*Filename:\*\*\s*`([^`]+)`\s*\n```\s*\n([\s\S]*?)\n```/g;
+  let match;
 
-    const filename = filenameMatch[1].replace('.jpg', '');
+  while ((match = pattern.exec(content)) !== null) {
+    const filename = match[1].replace('.jpg', '');
+    const prompt = match[2].trim();
 
-    // Extract the prompt (in code block after filename)
-    const promptMatch = section.match(/```\s*\n([\s\S]+?)\n```/);
-    if (!promptMatch) continue;
-
-    const prompt = promptMatch[1].trim();
-
-    // Extract key phrases from prompt (first 5-10 words before commas/dashes)
+    // Extract key phrases from prompt (first phrase with key descriptors)
     const promptWords = prompt
       .toLowerCase()
-      .split(/[,\-\n]/)[0] // Take first phrase before comma or dash
+      .replace(/^[\s\-•]+/, '') // Remove leading dashes/bullets
+      .split(/[,\n]/)[0] // Take first phrase before comma or newline
+      .replace(/--ar.*$/i, '') // Remove Midjourney parameters
       .replace(/[^\w\s]/g, '') // Remove special chars
       .split(/\s+/)
-      .filter(w => w.length > 2); // Skip short words
+      .filter(w => w.length > 2 && !['the', 'and', 'with', 'for'].includes(w)); // Skip short/common words
 
     images.push({
       filename: filename + '.jpg',
@@ -76,6 +72,7 @@ function findMatch(mjFilename, expectedImages) {
 
   let bestMatch = null;
   let bestScore = 0;
+  const DEBUG = process.env.DEBUG;
 
   for (const image of expectedImages) {
     let score = 0;
@@ -95,8 +92,12 @@ function findMatch(mjFilename, expectedImages) {
       }
     }
 
-    // Need at least 3 keyword matches or 60% of keywords
+    // Need at least 3 keyword matches or 50% of keywords
     const threshold = Math.max(3, image.promptKeywords.length * 0.5);
+
+    if (DEBUG && score >= 2) {
+      console.log(`     Testing: ${image.filename} (score: ${score.toFixed(1)}, threshold: ${threshold.toFixed(1)})`);
+    }
 
     if (score >= threshold && score > bestScore) {
       bestScore = score;
@@ -154,6 +155,15 @@ function scanDownloads() {
   console.log(`\n🔍 Scanning for new images...`);
   console.log(`   Expecting ${expectedImages.length} images\n`);
 
+  // Debug: Show first few expected images with keywords
+  if (process.env.DEBUG) {
+    console.log(`📋 Sample expected images:`);
+    expectedImages.slice(0, 3).forEach(img => {
+      console.log(`   ${img.filename}: [${img.promptKeywords.slice(0, 5).join(', ')}]`);
+    });
+    console.log();
+  }
+
   // Check if source directory exists
   if (!fs.existsSync(DOWNLOADS_DIR)) {
     console.log(`⚠️  Source directory not found: ${DOWNLOADS_DIR}`);
@@ -178,6 +188,10 @@ function scanDownloads() {
   const unmatched = [];
 
   for (const file of imageFiles) {
+    if (process.env.DEBUG) {
+      console.log(`\n🔎 Processing: ${file.substring(0, 60)}...`);
+    }
+
     const match = findMatch(file, expectedImages);
 
     if (match) {
@@ -193,6 +207,9 @@ function scanDownloads() {
         newCount++;
       }
     } else {
+      if (process.env.DEBUG) {
+        console.log(`   ❌ No match found\n`);
+      }
       unmatched.push(file);
     }
   }

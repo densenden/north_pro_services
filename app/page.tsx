@@ -36,41 +36,42 @@ export default function HomePage() {
               {
                 iconName: 'apartment',
                 title: 'Gebäudereinigung',
-                description: 'Professionelle Reinigung für Büros, Praxen und Objekte – individuell planbar',
+                description: 'Professionelle Reinigung für Büros, Praxen und Objekte',
                 image: '/images/service-cleaning.jpg'
               },
               {
                 iconName: 'shield',
                 title: 'Sicherheitsdienste',
-                description: 'Objektschutz, Doorman, Streifendienst – geschult & zuverlässig',
+                description: 'Objektschutz, Doorman und Streifendienst',
                 image: '/images/service-security.jpg'
               },
               {
                 iconName: 'handyman',
                 title: 'Hausmeisterservice',
-                description: 'Wartung, Pflege, Kontrolle – aus einer Hand',
+                description: 'Wartung, Pflege und Kontrolle aus einer Hand',
                 image: '/images/service-facility.jpg'
               },
               {
                 iconName: 'auto_awesome',
                 title: 'Sonderreinigung',
-                description: 'Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt',
+                description: 'Baureinigung, Glasreinigung und Desinfektion',
                 image: '/images/service-special.jpg'
               },
             ].map((service, index) => (
-              <div key={index} className="card group hover:-translate-y-2 overflow-hidden p-0">
-                <div className="relative h-48 bg-primary-steel overflow-hidden">
+              <div key={index} className="group cursor-pointer overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                <div className="relative h-80 overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                     style={{ backgroundImage: `url('${service.image}')` }}
                   />
-                  <div className="absolute inset-0 bg-deep-navy/40 flex items-center justify-center">
-                    <Icon name={service.iconName} className="text-7xl text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-deep-navy/95"></div>
+                  <div className="absolute inset-0 flex flex-col justify-end p-6">
+                    <div className="mb-3">
+                      <Icon name={service.iconName} className="text-5xl text-white drop-shadow-lg" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
+                    <p className="text-ice-white text-sm leading-relaxed">{service.description}</p>
                   </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="heading-4 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
                 </div>
               </div>
             ))}
