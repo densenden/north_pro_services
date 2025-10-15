@@ -61,11 +61,12 @@ export default function JobsPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white section">
-        <div className="container-custom text-center">
-          <h1 className="heading-1 mb-6">Werde Teil von North Pro Services</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
-            Wir suchen Menschen mit Verantwortung & Teamgeist
+      <section className="hero-section relative bg-deep-navy text-white section">
+        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="container-custom text-center relative z-10">
+          <h1 className="heading-1 mb-6 text-white">Karriere bei North Pro Services</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
+            Werde Teil unseres Teams und gestalte die Zukunft der Gebäudeservices mit.
           </p>
         </div>
       </section>
@@ -79,13 +80,13 @@ export default function JobsPage() {
               <div key={index} className="card">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="heading-3 text-primary-steel mb-2">{job.title}</h3>
+                    <h3 className="heading-3 mb-2">{job.title}</h3>
                     <div className="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400">
                       <span className="flex items-center gap-1">
-                        <Icon name="location_on" /> {job.location}
+                        <Icon name="location_on" className="text-primary-steel" /> {job.location}
                       </span>
                       <span className="flex items-center gap-1">
-                        <Icon name="schedule" /> {job.type}
+                        <Icon name="schedule" className="text-primary-steel" /> {job.type}
                       </span>
                     </div>
                   </div>
@@ -123,8 +124,8 @@ export default function JobsPage() {
               { iconName: 'handshake', title: 'Teamgeist', text: 'Kollegiales Arbeitsklima' },
             ].map((benefit, index) => (
               <div key={index} className="card text-center">
-                <div className="text-5xl mb-4"><Icon name={benefit.iconName} className="text-5xl" /></div>
-                <h3 className="heading-4 mb-2 text-primary-steel">{benefit.title}</h3>
+                <div className="mb-4"><Icon name={benefit.iconName} className="text-6xl text-primary-steel" /></div>
+                <h3 className="heading-4 mb-2">{benefit.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{benefit.text}</p>
               </div>
             ))}

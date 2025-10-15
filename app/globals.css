@@ -1,17 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: 'Poster Gothic';
+  src: url('/Poster Gothic Cond ATF Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 @theme {
+  /* Simplified color system - only use primary for accents, rest is neutral */
   --color-primary-steel: #5B74A6;
   --color-deep-navy: #1E3340;
-  --color-cool-slate: #697F8C;
-  --color-ice-white: #F0F1F2;
-  --color-fog-grey: #AAB9BF;
-  --color-background-dark: #0B0E11;
-  --color-surface-dark: #1A2028;
+  --color-cool-slate: #5B74A6;  /* Same as primary for simplicity */
+  --color-ice-white: #F8F9FA;
+  --color-fog-grey: #6B7280;  /* Neutral gray */
+  --color-background-dark: #111827;
+  --color-surface-dark: #1F2937;
 
   --font-family-sans: Inter, system-ui, sans-serif;
+  --font-family-poster: 'Poster Gothic', Inter, system-ui, sans-serif;
 }
 
 .material-symbols-outlined {
@@ -20,6 +29,35 @@
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+/* Fix form autofill in dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-deep-navy);
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark textarea:-webkit-autofill,
+.dark textarea:-webkit-autofill:hover,
+.dark textarea:-webkit-autofill:focus,
+.dark select:-webkit-autofill,
+.dark select:-webkit-autofill:hover,
+.dark select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-ice-white);
+  -webkit-box-shadow: 0 0 0px 1000px var(--color-surface-dark) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 body {
@@ -75,13 +113,18 @@ body {
 .btn-primary {
   background-color: var(--color-primary-steel);
   color: white;
-  font-weight: 600;
+  font-family: var(--font-family-poster);
+  font-weight: 500;
+  font-size: 1.2em;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   display: inline-block;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0 100%);
 }
 
 .btn-primary:hover {
@@ -93,10 +136,15 @@ body {
 .btn-secondary {
   background-color: var(--color-cool-slate);
   color: white;
-  font-weight: 600;
+  font-family: var(--font-family-poster);
+  font-weight: 500;
+  font-size: 1.2em;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0 100%);
 }
 
 .btn-secondary:hover {
@@ -104,18 +152,26 @@ body {
 }
 
 .btn-outline {
-  border: 2px solid var(--color-primary-steel);
-  color: var(--color-primary-steel);
-  font-weight: 600;
+  background-color: rgba(91, 116, 166, 0.5);
+  color: white;
+  font-family: var(--font-family-poster);
+  font-weight: 500;
+  font-size: 1.2em;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   transition: all 0.3s;
-  background-color: transparent;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0 100%);
 }
 
 .btn-outline:hover {
   background-color: var(--color-primary-steel);
-  color: white;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05);
 }
 
 .card {
@@ -125,6 +181,7 @@ body {
   padding: 1.5rem;
   border: 1px solid var(--color-ice-white);
   transition: all 0.3s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 0 100%);
 }
 
 .card:hover {
@@ -134,6 +191,12 @@ body {
 .dark .card {
   background-color: var(--color-surface-dark);
   border-color: #2a3542;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3rem), calc(100% - 3rem) 100%, 0 100%);
 }
 
 .section {
@@ -152,6 +215,16 @@ body {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-deep-navy);
+}
+
+.dark .heading-1 {
+  color: var(--color-ice-white);
+}
+
+/* Allow utility classes to override */
+.heading-1[class*="text-"] {
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -164,6 +237,15 @@ body {
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-deep-navy);
+}
+
+.dark .heading-2 {
+  color: var(--color-ice-white);
+}
+
+.heading-2[class*="text-"] {
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -176,6 +258,15 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
+  color: var(--color-deep-navy);
+}
+
+.dark .heading-3 {
+  color: var(--color-ice-white);
+}
+
+.heading-3[class*="text-"] {
+  color: inherit;
 }
 
 @media (min-width: 768px) {
@@ -188,6 +279,15 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.2;
+  color: var(--color-deep-navy);
+}
+
+.dark .heading-4 {
+  color: var(--color-ice-white);
+}
+
+.heading-4[class*="text-"] {
+  color: inherit;
 }
 
 @media (min-width: 768px) {

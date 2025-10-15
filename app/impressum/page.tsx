@@ -17,14 +17,15 @@ export default function ImpressumPage() {
 
               <p className="mb-6">
                 <strong>North Pro Services</strong><br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]<br />
+                Himmelweiler 7/1<br />
+                89081 Ulm<br />
                 Deutschland
               </p>
 
               <h3 className="heading-4 mb-3 mt-8">Vertreten durch</h3>
               <p className="mb-6">
-                [Name des Geschäftsführers / Inhabers]
+                Pierre Fastrich<br />
+                Geschäftsführer
               </p>
 
               <h3 className="heading-4 mb-3 mt-8">Kontakt</h3>

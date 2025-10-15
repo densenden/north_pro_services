@@ -60,15 +60,16 @@ export default function AppPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-cool-slate to-fog-grey text-white section">
-        <div className="container-custom">
+      <section className="hero-section relative bg-deep-navy text-white section">
+        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <Icon name="smartphone" className="text-5xl" />
-            <h1 className="heading-1 mb-6">NorthPatrol App</h1>
-            <p className="text-xl md:text-2xl mb-8 text-gray-100">
+            <Icon name="smartphone" className="text-7xl mb-4 text-white" />
+            <h1 className="heading-1 mb-6 text-white">NorthPatrol App</h1>
+            <p className="text-xl md:text-2xl mb-8 text-primary-steel">
               Die digitale Lösung für Ihre Kontrollrundgänge
             </p>
-            <p className="text-lg mb-8 text-gray-200 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
               Mit QR-Code-Scans, Checklisten & Echtzeitberichten sichern Sie Qualität & Transparenz bei jedem Rundgang.
             </p>
             <button className="btn-primary bg-white text-primary-steel hover:bg-gray-100">
@@ -121,10 +122,10 @@ export default function AppPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="card group hover:-translate-y-2">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                  <Icon name={feature.iconName} className="text-4xl" />
+                <div className="mb-4 group-hover:scale-110 transition-transform">
+                  <Icon name={feature.iconName} className="text-6xl text-primary-steel" />
                 </div>
-                <h3 className="heading-4 mb-3 text-primary-steel">{feature.title}</h3>
+                <h3 className="heading-4 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -133,15 +134,15 @@ export default function AppPage() {
       </section>
 
       {/* Benefits */}
-      <section className="section bg-gradient-to-br from-primary to-primary-dark text-white">
+      <section className="section bg-primary-steel dark:bg-deep-navy text-white">
         <div className="container-custom">
-          <h2 className="heading-2 text-center mb-12">Ihre Vorteile</h2>
+          <h2 className="heading-2 text-center mb-12 text-white">Ihre Vorteile</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-white/10 backdrop-blur rounded-xl p-6 text-center">
-                <div className="text-5xl mb-4"><Icon name={benefit.iconName} className="text-5xl" /></div>
+                <div className="mb-4"><Icon name={benefit.iconName} className="text-6xl text-white" /></div>
                 <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                <p className="text-gray-200">{benefit.description}</p>
+                <p className="text-gray-100">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -160,9 +161,9 @@ export default function AppPage() {
               { iconName: 'storefront', title: 'Einzelhandel', text: 'Laden- und Objektschutz' },
             ].map((useCase, index) => (
               <div key={index} className="card flex items-start gap-4">
-                <div className="text-5xl"><Icon name={useCase.iconName} className="text-5xl" /></div>
+                <div><Icon name={useCase.iconName} className="text-6xl text-primary-steel" /></div>
                 <div>
-                  <h3 className="heading-4 mb-2 text-primary-steel">{useCase.title}</h3>
+                  <h3 className="heading-4 mb-2">{useCase.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300">{useCase.text}</p>
                 </div>
               </div>
@@ -182,7 +183,7 @@ export default function AppPage() {
             <a href="/kontakt" className="btn-primary bg-white text-primary-steel hover:bg-gray-100">
               Demo anfragen
             </a>
-            <a href="/kontakt" className="btn-outline border-white text-white hover:bg-white hover:text-primary-steel-steel">
+            <a href="/kontakt" className="btn-primary bg-white text-primary-steel hover:bg-gray-100">
               Mehr Informationen
             </a>
           </div>

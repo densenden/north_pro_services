@@ -63,8 +63,9 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
             <ul className="space-y-2 text-fog-grey">
-              <li>Frankfurt am Main</li>
-              <li>Deutschland</li>
+              <li>North Pro Services GmbH</li>
+              <li>Himmelweiler 7/1</li>
+              <li>89081 Ulm</li>
               <li className="pt-2">
                 <Link href="/kontakt" className="text-primary-steel hover:text-white transition-colors">
                   Kontaktformular →
@@ -85,6 +86,9 @@ export default function Footer() {
             </Link>
             <Link href="/datenschutz" className="text-fog-grey hover:text-white text-sm transition-colors">
               Datenschutz
+            </Link>
+            <Link href="/about" className="text-fog-grey hover:text-white text-sm transition-colors">
+              Über uns
             </Link>
           </div>
         </div>

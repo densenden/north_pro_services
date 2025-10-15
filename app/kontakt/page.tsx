@@ -22,10 +22,11 @@ export default function KontaktPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white section">
-        <div className="container-custom text-center">
-          <h1 className="heading-1 mb-6">Kontaktieren Sie uns</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
+      <section className="hero-section relative bg-deep-navy text-white section">
+        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="container-custom text-center relative z-10">
+          <h1 className="heading-1 mb-6 text-white">Kontaktieren Sie uns</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
             Wir freuen uns auf Ihre Anfrage. Ob Projekt, Dauerauftrag oder Job – sprechen Sie mit uns!
           </p>
         </div>
@@ -135,11 +136,12 @@ export default function KontaktPage() {
               <div className="space-y-6">
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <Icon name="location_on" className="text-5xl" />
+                    <Icon name="location_on" className="text-6xl text-primary-steel" />
                     <div>
                       <h3 className="heading-4 mb-2">Standort</h3>
                       <p className="text-gray-700 dark:text-gray-300">
-                        Frankfurt am Main<br />
+                        Himmelweiler 7/1<br />
+                        89081 Ulm<br />
                         Deutschland
                       </p>
                     </div>
@@ -148,7 +150,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <Icon name="email" className="text-5xl" />
+                    <Icon name="email" className="text-6xl text-primary-steel" />
                     <div>
                       <h3 className="heading-4 mb-2">E-Mail</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -160,7 +162,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <Icon name="smartphone" className="text-5xl" />
+                    <Icon name="smartphone" className="text-6xl text-primary-steel" />
                     <div>
                       <h3 className="heading-4 mb-2">Telefon</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -172,7 +174,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <Icon name="schedule" className="text-5xl" />
+                    <Icon name="schedule" className="text-6xl text-primary-steel" />
                     <div>
                       <h3 className="heading-4 mb-2">Geschäftszeiten</h3>
                       <p className="text-gray-700 dark:text-gray-300">

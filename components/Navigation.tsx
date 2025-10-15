@@ -10,26 +10,58 @@ export default function Navigation() {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check for dark mode preference
-    const isDarkMode = document.documentElement.classList.contains('dark');
-    setIsDark(isDarkMode);
+    // Check for saved theme preference or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'dark' ||
+        (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
+    }
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        setIsDark(e.matches);
+        if (e.matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   const toggleDarkMode = () => {
-    document.documentElement.classList.toggle('dark');
-    setIsDark(!isDark);
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    if (newIsDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   };
 
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/leistungen', label: 'Leistungen' },
     { href: '/app', label: 'NorthPatrol' },
+    { href: '/about', label: 'Über uns' },
     { href: '/jobs', label: 'Jobs' },
     { href: '/kontakt', label: 'Kontakt' },
   ];
 
   return (
-    <nav className="bg-white dark:bg-surface-dark shadow-lg sticky top-0 z-50">
+    <nav className="bg-white dark:bg-deep-navy shadow-lg sticky top-0 z-50">
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -37,16 +69,16 @@ export default function Navigation() {
             <Image
               src="/logos/wordmark_dark.svg"
               alt="North Pro Services"
-              width={200}
-              height={60}
+              width={160}
+              height={48}
               className="dark:hidden"
               priority
             />
             <Image
               src="/logos/wordmark_light.svg"
               alt="North Pro Services"
-              width={200}
-              height={60}
+              width={160}
+              height={48}
               className="hidden dark:block"
               priority
             />

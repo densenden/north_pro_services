@@ -55,10 +55,11 @@ export default function LeistungenPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary-dark text-white section">
-        <div className="container-custom text-center">
-          <h1 className="heading-1 mb-6">Unsere Leistungen</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-200">
+      <section className="hero-section relative bg-deep-navy text-white section">
+        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="container-custom text-center relative z-10">
+          <h1 className="heading-1 mb-6 text-white">Unsere Leistungen</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
             Professionelle Dienstleistungen für Unternehmen und Institutionen – individuell, zuverlässig und mit höchsten Qualitätsstandards.
           </p>
         </div>
@@ -77,15 +78,15 @@ export default function LeistungenPage() {
               >
                 <div className="flex-1">
                   <div className="card">
-                    <div className="text-6xl mb-6"><Icon name={service.iconName} className="text-5xl" /></div>
-                    <h2 className="heading-3 mb-4 text-primary-steel">{service.title}</h2>
+                    <div className="mb-6"><Icon name={service.iconName} className="text-7xl text-primary-steel" /></div>
+                    <h2 className="heading-3 mb-4">{service.title}</h2>
                     <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
                       {service.description}
                     </p>
                     <ul className="space-y-3">
                       {service.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="text-primary-steel mt-1">✓</span>
+                          <Icon name="check_circle" className="text-primary-steel text-xl mt-1" />
                           <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                         </li>
                       ))}
@@ -93,8 +94,8 @@ export default function LeistungenPage() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-gradient-to-br from-primary-light to-fog-grey rounded-xl h-80 flex items-center justify-center text-white text-8xl">
-                    <Icon name={service.iconName} className="text-5xl" />
+                  <div className="bg-primary-steel rounded-xl h-80 flex items-center justify-center text-white">
+                    <Icon name={service.iconName} className="text-9xl opacity-90" />
                   </div>
                 </div>
               </div>
@@ -115,8 +116,8 @@ export default function LeistungenPage() {
               { iconName: 'lock', title: 'Zuverlässigkeit', text: 'Pünktlich, diskret und vertrauenswürdig' },
             ].map((item, i) => (
               <div key={i} className="card text-center">
-                <div className="text-5xl mb-4"><Icon name={item.iconName} className="text-5xl" /></div>
-                <h3 className="heading-4 mb-2 text-primary-steel">{item.title}</h3>
+                <div className="mb-4"><Icon name={item.iconName} className="text-6xl text-primary-steel" /></div>
+                <h3 className="heading-4 mb-2">{item.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{item.text}</p>
               </div>
             ))}
