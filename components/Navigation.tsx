@@ -1,10 +1,24 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import Image from 'next/image';
+import { useState, useEffect } from 'react';
+import Icon from './Icon';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check for dark mode preference
+    const isDarkMode = document.documentElement.classList.contains('dark');
+    setIsDark(isDarkMode);
+  }, []);
+
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle('dark');
+    setIsDark(!isDark);
+  };
 
   const navItems = [
     { href: '/', label: 'Home' },
@@ -12,7 +26,6 @@ export default function Navigation() {
     { href: '/app', label: 'NorthPatrol' },
     { href: '/jobs', label: 'Jobs' },
     { href: '/kontakt', label: 'Kontakt' },
-    { href: '/styleguide', label: 'Styleguide' },
   ];
 
   return (
@@ -20,10 +33,23 @@ export default function Navigation() {
       <div className="container-custom">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary">
-              North Pro Services
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logos/wordmark_dark.svg"
+              alt="North Pro Services"
+              width={200}
+              height={60}
+              className="dark:hidden"
+              priority
+            />
+            <Image
+              src="/logos/wordmark_light.svg"
+              alt="North Pro Services"
+              width={200}
+              height={60}
+              className="hidden dark:block"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -32,41 +58,37 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-light font-medium transition-colors duration-300"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary-steel dark:hover:text-fog-grey font-medium transition-colors duration-300"
               >
                 {item.label}
               </Link>
             ))}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              <Icon name={isDark ? 'light_mode' : 'dark_mode'} className="text-2xl" />
+            </button>
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          {/* Mobile menu buttons */}
+          <div className="md:hidden flex items-center gap-2">
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle dark mode"
             >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <Icon name={isDark ? 'light_mode' : 'dark_mode'} className="text-xl" />
+            </button>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+              aria-label="Toggle menu"
+            >
+              <Icon name={isOpen ? 'close' : 'menu'} className="text-2xl" />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -76,7 +98,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+                className="block py-2 px-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

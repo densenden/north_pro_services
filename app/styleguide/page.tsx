@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Icon from '@/components/Icon';
 
 export default function StyleGuidePage() {
   const [isDark, setIsDark] = useState(false);
@@ -22,7 +23,7 @@ export default function StyleGuidePage() {
             </div>
             <button
               onClick={toggleDarkMode}
-              className="btn-primary bg-white text-primary hover:bg-gray-100"
+              className="btn-primary bg-white text-primary-steel hover:bg-gray-100"
             >
               {isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}
             </button>
@@ -39,21 +40,21 @@ export default function StyleGuidePage() {
               <h3 className="heading-4 mb-4">Primärfarben</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-primary shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-primary-steel shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Primary</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#2F4D5C</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-primary-dark shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-primary-steel-dark shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Primary Dark</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#2A3D4A</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-primary-light shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-primary-steel-light shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Primary Light</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#758D9D</p>
@@ -66,14 +67,14 @@ export default function StyleGuidePage() {
               <h3 className="heading-4 mb-4">Akzentfarben</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-accent shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-cool-slate shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Accent</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#6B7F8F</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-accent-light shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-cool-slate-light shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Accent Light</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#758D9D</p>
@@ -86,7 +87,7 @@ export default function StyleGuidePage() {
               <h3 className="heading-4 mb-4">Hintergründe</h3>
               <div className="space-y-3">
                 <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 rounded-lg bg-background-light border shadow-lg"></div>
+                  <div className="w-20 h-20 rounded-lg bg-ice-white border shadow-lg"></div>
                   <div>
                     <p className="font-semibold">Background Light</p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">#F9FAFB</p>
@@ -161,21 +162,21 @@ export default function StyleGuidePage() {
           <h2 className="heading-2 mb-8">Cards</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="card">
-              <div className="text-4xl mb-4">🏢</div>
+              <Icon name="apartment" className="text-5xl" />
               <h4 className="heading-4 mb-2">Gebäudereinigung</h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Professionelle Reinigung für Büros und Praxen
               </p>
             </div>
             <div className="card">
-              <div className="text-4xl mb-4">🛡️</div>
+              <Icon name="shield" className="text-5xl" />
               <h4 className="heading-4 mb-2">Sicherheitsdienste</h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Objektschutz und Streifendienst
               </p>
             </div>
             <div className="card">
-              <div className="text-4xl mb-4">🔧</div>
+              <Icon name="handyman" className="text-5xl" />
               <h4 className="heading-4 mb-2">Hausmeisterservice</h4>
               <p className="text-gray-600 dark:text-gray-300">
                 Wartung und Pflege aus einer Hand
@@ -239,7 +240,7 @@ export default function StyleGuidePage() {
           <h2 className="heading-2 mb-8">Grid System</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="bg-primary-light text-white p-6 rounded-lg text-center">
+              <div key={i} className="bg-primary-steel-light text-white p-6 rounded-lg text-center">
                 <p className="font-semibold">Grid Column {i}</p>
               </div>
             ))}
@@ -250,7 +251,7 @@ export default function StyleGuidePage() {
         <section className="mb-16">
           <h2 className="heading-2 mb-8">Icons</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {['🏢', '🛡️', '🔧', '✨', '📱', '📊', '🔔', '💼'].map((icon, i) => (
+            {['<Icon name="apartment" />', '<Icon name="shield" />', '<Icon name="handyman" />', '<Icon name="auto_awesome" />', '<Icon name="smartphone" />', '<Icon name="analytics" />', '<Icon name="notifications" />', '<Icon name="work" />'].map((icon, i) => (
               <div key={i} className="card text-center">
                 <div className="text-5xl">{icon}</div>
               </div>
@@ -263,11 +264,11 @@ export default function StyleGuidePage() {
           <h2 className="heading-2 mb-8">Spacing & Layout</h2>
           <div className="card">
             <div className="space-y-4">
-              <div className="bg-primary-light h-4 rounded"></div>
-              <div className="bg-primary-light h-8 rounded"></div>
-              <div className="bg-primary-light h-12 rounded"></div>
-              <div className="bg-primary-light h-16 rounded"></div>
-              <div className="bg-primary-light h-24 rounded"></div>
+              <div className="bg-primary-steel-light h-4 rounded"></div>
+              <div className="bg-primary-steel-light h-8 rounded"></div>
+              <div className="bg-primary-steel-light h-12 rounded"></div>
+              <div className="bg-primary-steel-light h-16 rounded"></div>
+              <div className="bg-primary-steel-light h-24 rounded"></div>
             </div>
           </div>
         </section>

@@ -1,28 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2F4D5C;
-  --color-primary-dark: #2A3D4A;
-  --color-primary-light: #758D9D;
-  --color-accent: #6B7F8F;
-  --color-accent-light: #758D9D;
-  --color-background-light: #F9FAFB;
+  --color-primary-steel: #5B74A6;
+  --color-deep-navy: #1E3340;
+  --color-cool-slate: #697F8C;
+  --color-ice-white: #F0F1F2;
+  --color-fog-grey: #AAB9BF;
   --color-background-dark: #0B0E11;
-  --color-surface-light: #ECEFF1;
-  --color-surface-dark: #1A1D21;
+  --color-surface-dark: #1A2028;
 
   --font-family-sans: Inter, system-ui, sans-serif;
 }
 
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
 body {
   background-color: white;
-  color: #111827;
+  color: var(--color-deep-navy);
 }
 
 .dark body {
   background-color: var(--color-background-dark);
-  color: #f3f4f6;
+  color: var(--color-ice-white);
+}
+
+.logo-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url('/logos/logo-n-animate.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.dark .logo-background {
+  opacity: 0.05;
 }
 
 .container-custom {
@@ -48,7 +73,7 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-steel);
   color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -60,13 +85,13 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-deep-navy);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   transform: scale(1.05);
 }
 
 .btn-secondary {
-  background-color: var(--color-accent);
+  background-color: var(--color-cool-slate);
   color: white;
   font-weight: 600;
   padding: 0.75rem 1.5rem;
@@ -75,12 +100,12 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-accent-light);
+  background-color: var(--color-fog-grey);
 }
 
 .btn-outline {
-  border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 2px solid var(--color-primary-steel);
+  color: var(--color-primary-steel);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
@@ -89,7 +114,7 @@ body {
 }
 
 .btn-outline:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-steel);
   color: white;
 }
 
@@ -98,7 +123,7 @@ body {
   border-radius: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
-  border: 1px solid #f3f4f6;
+  border: 1px solid var(--color-ice-white);
   transition: all 0.3s;
 }
 
@@ -108,7 +133,7 @@ body {
 
 .dark .card {
   background-color: var(--color-surface-dark);
-  border-color: #1f2937;
+  border-color: #2a3542;
 }
 
 .section {

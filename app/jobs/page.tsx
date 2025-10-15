@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Icon from '@/components/Icon';
 
 export default function JobsPage() {
   const [formData, setFormData] = useState({
@@ -70,7 +71,7 @@ export default function JobsPage() {
       </section>
 
       {/* Job Listings */}
-      <section className="section bg-background-light dark:bg-background-dark">
+      <section className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
           <h2 className="heading-2 text-center mb-12">Offene Stellen</h2>
           <div className="grid gap-6 max-w-4xl mx-auto">
@@ -78,13 +79,13 @@ export default function JobsPage() {
               <div key={index} className="card">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div>
-                    <h3 className="heading-3 text-primary mb-2">{job.title}</h3>
+                    <h3 className="heading-3 text-primary-steel mb-2">{job.title}</h3>
                     <div className="flex flex-wrap gap-3 text-sm text-gray-600 dark:text-gray-400">
                       <span className="flex items-center gap-1">
-                        📍 {job.location}
+                        <Icon name="location_on" /> {job.location}
                       </span>
                       <span className="flex items-center gap-1">
-                        ⏰ {job.type}
+                        <Icon name="schedule" /> {job.type}
                       </span>
                     </div>
                   </div>
@@ -95,7 +96,7 @@ export default function JobsPage() {
                   <ul className="space-y-2">
                     {job.requirements.map((req, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-600 dark:text-gray-300">
-                        <span className="text-primary mt-1">✓</span>
+                        <span className="text-primary-steel mt-1">✓</span>
                         <span>{req}</span>
                       </li>
                     ))}
@@ -116,14 +117,14 @@ export default function JobsPage() {
           <h2 className="heading-2 text-center mb-12">Was wir bieten</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: '💰', title: 'Faire Bezahlung', text: 'Leistungsgerechte Vergütung' },
-              { icon: '📅', title: 'Flexibilität', text: 'Familienfreundliche Arbeitszeiten' },
-              { icon: '🎓', title: 'Weiterbildung', text: 'Schulungen und Entwicklung' },
-              { icon: '🤝', title: 'Teamgeist', text: 'Kollegiales Arbeitsklima' },
+              { iconName: 'payments', title: 'Faire Bezahlung', text: 'Leistungsgerechte Vergütung' },
+              { iconName: 'event', title: 'Flexibilität', text: 'Familienfreundliche Arbeitszeiten' },
+              { iconName: 'school', title: 'Weiterbildung', text: 'Schulungen und Entwicklung' },
+              { iconName: 'handshake', title: 'Teamgeist', text: 'Kollegiales Arbeitsklima' },
             ].map((benefit, index) => (
               <div key={index} className="card text-center">
-                <div className="text-5xl mb-4">{benefit.icon}</div>
-                <h3 className="heading-4 mb-2 text-primary">{benefit.title}</h3>
+                <div className="text-5xl mb-4"><Icon name={benefit.iconName} className="text-5xl" /></div>
+                <h3 className="heading-4 mb-2 text-primary-steel">{benefit.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300">{benefit.text}</p>
               </div>
             ))}
@@ -132,7 +133,7 @@ export default function JobsPage() {
       </section>
 
       {/* Application Form */}
-      <section id="bewerbung" className="section bg-background-light dark:bg-background-dark">
+      <section id="bewerbung" className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
           <div className="max-w-2xl mx-auto">
             <h2 className="heading-2 text-center mb-8">Bewerbungsformular</h2>
@@ -225,13 +226,13 @@ export default function JobsPage() {
       </section>
 
       {/* Initiativbewerbung */}
-      <section className="section bg-gradient-to-r from-accent to-accent-light text-white">
+      <section className="section bg-gradient-to-r from-cool-slate to-fog-grey text-white">
         <div className="container-custom text-center">
           <h2 className="heading-2 mb-6">Ihre Position ist nicht dabei?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Senden Sie uns eine Initiativbewerbung – wir freuen uns auf Ihre Kontaktaufnahme!
           </p>
-          <a href="#bewerbung" className="btn-primary bg-white text-primary hover:bg-gray-100">
+          <a href="#bewerbung" className="btn-primary bg-white text-primary-steel hover:bg-gray-100">
             Initiativbewerbung senden
           </a>
         </div>

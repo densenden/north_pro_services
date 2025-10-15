@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Icon from '@/components/Icon';
 
 export default function KontaktPage() {
   const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ export default function KontaktPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="section bg-background-light dark:bg-background-dark">
+      <section className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -114,7 +115,7 @@ export default function KontaktPage() {
                     />
                     <label htmlFor="dsgvo" className="text-sm text-gray-600 dark:text-gray-300">
                       Ich akzeptiere die{' '}
-                      <a href="/datenschutz" className="text-primary hover:underline">
+                      <a href="/datenschutz" className="text-primary-steel hover:underline">
                         Datenschutzbestimmungen
                       </a>{' '}
                       und stimme der Verarbeitung meiner Daten zu. *
@@ -134,7 +135,7 @@ export default function KontaktPage() {
               <div className="space-y-6">
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl text-primary">📍</div>
+                    <Icon name="location_on" className="text-5xl" />
                     <div>
                       <h3 className="heading-4 mb-2">Standort</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -147,7 +148,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl text-primary">📧</div>
+                    <Icon name="email" className="text-5xl" />
                     <div>
                       <h3 className="heading-4 mb-2">E-Mail</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -159,7 +160,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl text-primary">📱</div>
+                    <Icon name="smartphone" className="text-5xl" />
                     <div>
                       <h3 className="heading-4 mb-2">Telefon</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -171,7 +172,7 @@ export default function KontaktPage() {
 
                 <div className="card">
                   <div className="flex items-start gap-4">
-                    <div className="text-4xl text-primary">⏰</div>
+                    <Icon name="schedule" className="text-5xl" />
                     <div>
                       <h3 className="heading-4 mb-2">Geschäftszeiten</h3>
                       <p className="text-gray-700 dark:text-gray-300">
@@ -185,7 +186,7 @@ export default function KontaktPage() {
               </div>
 
               {/* Quick Contact */}
-              <div className="mt-6 card bg-gradient-to-br from-accent to-accent-light text-white">
+              <div className="mt-6 card bg-gradient-to-br from-cool-slate to-fog-grey text-white">
                 <h3 className="heading-4 mb-4">Schnelle Anfrage?</h3>
                 <p className="mb-4">
                   Für dringende Anfragen erreichen Sie uns auch direkt per Telefon oder E-Mail.
@@ -193,7 +194,7 @@ export default function KontaktPage() {
                 <div className="flex flex-col gap-3">
                   <a
                     href="tel:+4969XXXXXXX"
-                    className="bg-white text-primary font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                    className="bg-white text-primary-steel font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center"
                   >
                     📞 Jetzt anrufen
                   </a>

@@ -9,7 +9,7 @@ export default function DatenschutzPage() {
       </section>
 
       {/* Datenschutz Content */}
-      <section className="section bg-background-light dark:bg-background-dark">
+      <section className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto card">
             <div className="prose dark:prose-invert max-w-none">
@@ -83,11 +83,11 @@ export default function DatenschutzPage() {
                 Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
               </p>
 
-              <div className="bg-accent/10 dark:bg-accent/20 border-l-4 border-accent p-4 mt-8 rounded">
+              <div className="bg-cool-slate/10 dark:bg-cool-slate/20 border-l-4 border-accent p-4 mt-8 rounded">
                 <p className="text-sm">
                   <strong>Stand:</strong> Oktober 2025<br />
                   Für weitere Fragen zum Datenschutz kontaktieren Sie uns gerne über unser{' '}
-                  <a href="/kontakt" className="text-primary hover:underline">Kontaktformular</a>.
+                  <a href="/kontakt" className="text-primary-steel hover:underline">Kontaktformular</a>.
                 </p>
               </div>
             </div>

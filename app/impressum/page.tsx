@@ -9,7 +9,7 @@ export default function ImpressumPage() {
       </section>
 
       {/* Impressum Content */}
-      <section className="section bg-background-light dark:bg-background-dark">
+      <section className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto card">
             <div className="prose dark:prose-invert max-w-none">
@@ -54,7 +54,7 @@ export default function ImpressumPage() {
               <h3 className="heading-4 mb-3 mt-8">EU-Streitschlichtung</h3>
               <p className="mb-6">
                 Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" className="text-primary-steel hover:underline">
                   https://ec.europa.eu/consumers/odr/
                 </a>
                 <br />
