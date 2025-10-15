@@ -6,6 +6,7 @@ export default function LeistungenPage() {
       iconName: 'apartment',
       title: 'Gebäudereinigung',
       description: 'Gründliche Reinigung für Büros, Praxen, Objekte – individuell planbar.',
+      image: '/images/detail-office-cleaning.jpg',
       features: [
         'Büroreinigung',
         'Praxisreinigung',
@@ -18,6 +19,7 @@ export default function LeistungenPage() {
       iconName: 'shield',
       title: 'Sicherheitsdienste',
       description: 'Objektschutz, Doorman, Streifendienst – geschult & zuverlässig.',
+      image: '/images/detail-security-patrol.jpg',
       features: [
         'Objektschutz',
         'Doorman Service',
@@ -30,6 +32,7 @@ export default function LeistungenPage() {
       iconName: 'handyman',
       title: 'Hausmeisterservice',
       description: 'Wartung, Pflege, Kontrolle – aus einer Hand.',
+      image: '/images/detail-facility-maintenance.jpg',
       features: [
         'Wartungsarbeiten',
         'Objektpflege',
@@ -42,6 +45,7 @@ export default function LeistungenPage() {
       iconName: 'auto_awesome',
       title: 'Sonderreinigungen',
       description: 'Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt.',
+      image: '/images/detail-construction-cleaning.jpg',
       features: [
         'Baureinigung',
         'Grundreinigung',
@@ -56,7 +60,7 @@ export default function LeistungenPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-services.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="heading-1 mb-6 text-white">Unsere Leistungen</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
@@ -94,8 +98,14 @@ export default function LeistungenPage() {
                   </div>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-primary-steel rounded-xl h-80 flex items-center justify-center text-white">
-                    <Icon name={service.iconName} className="text-9xl opacity-90" />
+                  <div className="relative rounded-xl h-80 overflow-hidden shadow-xl">
+                    <div
+                      className="absolute inset-0 bg-cover bg-center"
+                      style={{ backgroundImage: `url('${service.image}')` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-navy/80 to-transparent flex items-end justify-center p-6">
+                      <Icon name={service.iconName} className="text-7xl text-white opacity-90" />
+                    </div>
                   </div>
                 </div>
               </div>

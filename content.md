@@ -32,7 +32,7 @@ Alle Inhalte sind modular aufgebaut und können als JSON oder direkt in React-Ko
 
 ---
 
-## 🧼 Leistungen
+##  Leistungen
 
 - **Gebäudereinigung**
   *Text:* Gründliche Reinigung für Büros, Praxen, Objekte – individuell planbar.

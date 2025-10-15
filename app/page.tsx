@@ -6,7 +6,7 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-home.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-1 mb-6 text-white">
@@ -37,29 +37,41 @@ export default function HomePage() {
                 iconName: 'apartment',
                 title: 'Gebäudereinigung',
                 description: 'Professionelle Reinigung für Büros, Praxen und Objekte – individuell planbar',
+                image: '/images/service-cleaning.jpg'
               },
               {
                 iconName: 'shield',
                 title: 'Sicherheitsdienste',
                 description: 'Objektschutz, Doorman, Streifendienst – geschult & zuverlässig',
+                image: '/images/service-security.jpg'
               },
               {
                 iconName: 'handyman',
                 title: 'Hausmeisterservice',
                 description: 'Wartung, Pflege, Kontrolle – aus einer Hand',
+                image: '/images/service-facility.jpg'
               },
               {
                 iconName: 'auto_awesome',
                 title: 'Sonderreinigung',
                 description: 'Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt',
+                image: '/images/service-special.jpg'
               },
             ].map((service, index) => (
-              <div key={index} className="card group hover:-translate-y-2">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Icon name={service.iconName} className="text-6xl text-primary-steel" />
+              <div key={index} className="card group hover:-translate-y-2 overflow-hidden p-0">
+                <div className="relative h-48 bg-primary-steel overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-300 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${service.image}')` }}
+                  />
+                  <div className="absolute inset-0 bg-deep-navy/40 flex items-center justify-center">
+                    <Icon name={service.iconName} className="text-7xl text-white" />
+                  </div>
                 </div>
-                <h3 className="heading-4 mb-3">{service.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+                <div className="p-6">
+                  <h3 className="heading-4 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300">{service.description}</p>
+                </div>
               </div>
             ))}
           </div>

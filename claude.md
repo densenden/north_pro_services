@@ -20,9 +20,9 @@
 ## 🎨 Style Guide / UI
 
 - **Fonts:** Inter (alle Schnitte), Tailwind eingebunden via Google Fonts
-- **Farben:** Aus Logo entnommen
-  - Hauptton: #2F4D5C (dunkles Blau-Grau)
-  - Akzent: #758D9D (helleres Eisblau)
+- **Farben:** Aus Logo entnommen, bitte 
+  - Hauptton, Glacier: #2F4D5C (dunkles Blau-Grau)
+  - Akzent, Ice : #758D9D (helleres Eisblau)
   - Weiß / Offwhite: #F9FAFB / #ECEFF1
   - Schwarz: #0B0E11 für Dark Mode
 - **Modi:** Dark & Light Mode via Tailwind Plugin

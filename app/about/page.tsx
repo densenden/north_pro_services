@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-about.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="heading-1 mb-6 text-white">Wer wir sind.</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
@@ -18,19 +18,47 @@ export default function AboutPage() {
       {/* Company Description */}
       <section className="section bg-ice-white dark:bg-background-dark">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div>
-              <h2 className="heading-2 mb-8">Unser Unternehmen</h2>
-              <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                <p>
-                  North Pro Services wurde mit dem Ziel gegründet, Unternehmen und Institutionen in Ulm und Umgebung durch zuverlässige Dienstleistungen zu unterstützen. Wir verstehen uns als Partner, der mit Verantwortung, Präzision und Diskretion arbeitet – jeden Tag, in jedem Objekt.
-                </p>
-                <p>
-                  Unter der Leitung von Pierre Fastrich haben wir uns zu einem vertrauenswürdigen Anbieter für Gebäudereinigung, Sicherheitsdienste und Hausmeisterleistungen entwickelt. Unser Team besteht aus geschulten Fachkräften, die mit Sorgfalt und Engagement an jedem Projekt arbeiten.
-                </p>
-                <p>
-                  Wir setzen auf transparente Kommunikation, faire Konditionen und langfristige Partnerschaften. North Pro Services ist mehr als ein Dienstleister – wir sind Teil Ihres täglichen Betriebs und tragen aktiv zu einem sauberen, sicheren und gepflegten Umfeld bei.
-                </p>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="heading-2 mb-12 text-center">Unser Unternehmen</h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p>
+                    North Pro Services wurde mit dem Ziel gegründet, Unternehmen und Institutionen in Ulm und Umgebung durch zuverlässige Dienstleistungen zu unterstützen. Wir verstehen uns als Partner, der mit Verantwortung, Präzision und Diskretion arbeitet – jeden Tag, in jedem Objekt.
+                  </p>
+                  <p>
+                    Unter der Leitung von Pierre Fastrich haben wir uns zu einem vertrauenswürdigen Anbieter für Gebäudereinigung, Sicherheitsdienste und Hausmeisterleistungen entwickelt. Unser Team besteht aus geschulten Fachkräften, die mit Sorgfalt und Engagement an jedem Projekt arbeiten.
+                  </p>
+                  <p>
+                    Wir setzen auf transparente Kommunikation, faire Konditionen und langfristige Partnerschaften. North Pro Services ist mehr als ein Dienstleister – wir sind Teil Ihres täglichen Betriebs und tragen aktiv zu einem sauberen, sicheren und gepflegten Umfeld bei.
+                  </p>
+                </div>
+              </div>
+              <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/images/about-team.jpg')" }}
+                />
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center mt-16">
+              <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl md:order-1">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{ backgroundImage: "url('/images/about-quality.jpg')" }}
+                />
+              </div>
+              <div className="md:order-2">
+                <h3 className="heading-3 mb-6">Qualität in jedem Detail</h3>
+                <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p>
+                    Qualität entsteht durch Sorgfalt, Training und den Willen, jeden Tag besser zu werden. Unsere Mitarbeiter durchlaufen regelmäßige Schulungen und arbeiten mit modernster Ausrüstung.
+                  </p>
+                  <p>
+                    Von der ersten Kontaktaufnahme bis zur langfristigen Betreuung – wir begleiten Sie professionell, verlässlich und mit höchstem Anspruch an unsere eigene Arbeit.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

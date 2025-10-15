@@ -61,7 +61,7 @@ export default function AppPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-northpatrol.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Icon name="smartphone" className="text-7xl mb-4 text-white" />
@@ -84,33 +84,44 @@ export default function AppPage() {
         <div className="container-custom">
           <h2 className="heading-2 text-center mb-12">So funktioniert's</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-steel text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                1
+            {[
+              {
+                step: 1,
+                title: 'QR-Code scannen',
+                description: 'Mitarbeiter scannen QR-Codes an jedem Checkpoint während des Rundgangs',
+                image: '/images/app-qr-checkpoint.jpg'
+              },
+              {
+                step: 2,
+                title: 'Checkliste ausfüllen',
+                description: 'Dokumentation von Kontrollen, Auffälligkeiten und erforderlichen Maßnahmen',
+                image: '/images/app-patrol-night.jpg'
+              },
+              {
+                step: 3,
+                title: 'Echtzeit-Auswertung',
+                description: 'Automatische Berichte und Benachrichtigungen im Admin-Dashboard',
+                image: '/images/app-dashboard.jpg'
+              }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="relative h-64 rounded-xl overflow-hidden shadow-xl mb-6">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url('${item.image}')` }}
+                  />
+                  <div className="absolute inset-0 bg-deep-navy/60 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-white text-primary-steel rounded-full flex items-center justify-center text-3xl font-bold">
+                      {item.step}
+                    </div>
+                  </div>
+                </div>
+                <h3 className="heading-4 mb-3">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  {item.description}
+                </p>
               </div>
-              <h3 className="heading-4 mb-3">QR-Code scannen</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Mitarbeiter scannen QR-Codes an jedem Checkpoint während des Rundgangs
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-steel text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="heading-4 mb-3">Checkliste ausfüllen</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Dokumentation von Kontrollen, Auffälligkeiten und erforderlichen Maßnahmen
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-steel text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="heading-4 mb-3">Echtzeit-Auswertung</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Automatische Berichte und Benachrichtigungen im Admin-Dashboard
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>

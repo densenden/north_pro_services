@@ -23,7 +23,7 @@ export default function KontaktPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-contact.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="heading-1 mb-6 text-white">Kontaktieren Sie uns</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
@@ -216,11 +216,36 @@ export default function KontaktPage() {
       {/* Map Section */}
       <section className="section bg-white dark:bg-surface-dark">
         <div className="container-custom">
-          <h2 className="heading-2 text-center mb-8">Unser Standort</h2>
-          <div className="rounded-xl overflow-hidden shadow-2xl h-96 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-            <p className="text-gray-600 dark:text-gray-400">
-              🗺️ Google Maps Integration hier einfügen
-            </p>
+          <h2 className="heading-2 text-center mb-8">Unser Standort in Ulm</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="relative rounded-xl overflow-hidden shadow-2xl h-96">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/contact-ulm-location.jpg')" }}
+              />
+            </div>
+            <div className="flex flex-col justify-center">
+              <h3 className="heading-3 mb-6">Himmelweiler 7/1, 89081 Ulm</h3>
+              <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
+                <p>
+                  Unser Hauptsitz befindet sich in Ulm, Baden-Württemberg. Von hier aus betreuen wir Kunden in der gesamten Region.
+                </p>
+                <p>
+                  Besuchen Sie uns gerne nach vorheriger Terminvereinbarung. Wir freuen uns auf ein persönliches Gespräch.
+                </p>
+              </div>
+              <div className="mt-6 p-6 bg-ice-white dark:bg-surface-dark rounded-xl">
+                <div className="flex items-start gap-4">
+                  <Icon name="directions_car" className="text-4xl text-primary-steel" />
+                  <div>
+                    <h4 className="font-semibold mb-2">Anfahrt</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Kostenfreie Parkplätze vor Ort verfügbar. Gut erreichbar über die B10 und B28.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

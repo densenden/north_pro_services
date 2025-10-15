@@ -62,7 +62,7 @@ export default function JobsPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/northpatrol.png')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-jobs.jpg')] bg-cover bg-center opacity-30"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="heading-1 mb-6 text-white">Karriere bei North Pro Services</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">
@@ -116,19 +116,51 @@ export default function JobsPage() {
       <section className="section bg-white dark:bg-surface-dark">
         <div className="container-custom">
           <h2 className="heading-2 text-center mb-12">Was wir bieten</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { iconName: 'payments', title: 'Faire Bezahlung', text: 'Leistungsgerechte Vergütung' },
-              { iconName: 'event', title: 'Flexibilität', text: 'Familienfreundliche Arbeitszeiten' },
-              { iconName: 'school', title: 'Weiterbildung', text: 'Schulungen und Entwicklung' },
-              { iconName: 'handshake', title: 'Teamgeist', text: 'Kollegiales Arbeitsklima' },
-            ].map((benefit, index) => (
-              <div key={index} className="card text-center">
-                <div className="mb-4"><Icon name={benefit.iconName} className="text-6xl text-primary-steel" /></div>
-                <h3 className="heading-4 mb-2">{benefit.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300">{benefit.text}</p>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h3 className="heading-3 mb-6">Arbeitsumfeld & Benefits</h3>
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { iconName: 'payments', title: 'Faire Bezahlung', text: 'Leistungsgerechte Vergütung' },
+                  { iconName: 'event', title: 'Flexibilität', text: 'Familienfreundliche Arbeitszeiten' },
+                  { iconName: 'school', title: 'Weiterbildung', text: 'Schulungen und Entwicklung' },
+                  { iconName: 'handshake', title: 'Teamgeist', text: 'Kollegiales Arbeitsklima' },
+                ].map((benefit, index) => (
+                  <div key={index} className="text-center">
+                    <div className="mb-3"><Icon name={benefit.iconName} className="text-5xl text-primary-steel" /></div>
+                    <h4 className="font-semibold mb-1 text-sm">{benefit.title}</h4>
+                    <p className="text-xs text-gray-600 dark:text-gray-300">{benefit.text}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/jobs-workplace.jpg')" }}
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl md:order-1">
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: "url('/images/jobs-team-spirit.jpg')" }}
+              />
+            </div>
+            <div className="md:order-2">
+              <h3 className="heading-3 mb-6">Teamkultur</h3>
+              <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>
+                  Bei North Pro Services arbeiten Sie in einem respektvollen und unterstützenden Umfeld. Wir fördern offene Kommunikation, gegenseitigen Respekt und kontinuierliche Weiterentwicklung.
+                </p>
+                <p>
+                  Ob Reinigung, Sicherheit oder Hausmeisterservice – jede Position ist wichtig, und jedes Teammitglied trägt zum gemeinsamen Erfolg bei.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
