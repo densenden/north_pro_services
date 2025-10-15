@@ -6,7 +6,7 @@ export default function HomePage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/hero-home.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-home.jpg')] bg-cover bg-center opacity-50"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-1 mb-6 text-white">

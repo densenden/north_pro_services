@@ -62,7 +62,7 @@ export default function JobsPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/hero-jobs.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-jobs.jpg')] bg-cover bg-center opacity-50"></div>
         <div className="container-custom text-center relative z-10">
           <h1 className="heading-1 mb-6 text-white">Karriere bei North Pro Services</h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto text-primary-steel">

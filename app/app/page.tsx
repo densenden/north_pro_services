@@ -61,7 +61,7 @@ export default function AppPage() {
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/hero-northpatrol.jpg')] bg-cover bg-center opacity-30"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-northpatrol.jpg')] bg-cover bg-center opacity-50"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Icon name="smartphone" className="text-7xl mb-4 text-white" />
