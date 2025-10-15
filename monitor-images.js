@@ -187,11 +187,36 @@ function scanDownloads() {
   let newCount = 0;
   const unmatched = [];
 
+  // Extract expected filenames for direct matching
+  const expectedFilenames = expectedImages.map(img => img.filename);
+
   for (const file of imageFiles) {
     if (process.env.DEBUG) {
       console.log(`\n🔎 Processing: ${file.substring(0, 60)}...`);
     }
 
+    // Check if filename already matches an expected filename (case-insensitive)
+    const lowerFile = file.toLowerCase();
+    const directMatch = expectedFilenames.find(expected =>
+      lowerFile === expected.toLowerCase() ||
+      lowerFile.replace(/\.(png|webp)$/i, '.jpg') === expected.toLowerCase()
+    );
+
+    if (directMatch) {
+      console.log(`✅ ${file.substring(0, 50)}...`);
+      console.log(`   → ${directMatch} (direct filename match)\n`);
+
+      const sourcePath = path.join(DOWNLOADS_DIR, file);
+      const success = processImage(sourcePath, directMatch);
+
+      if (success) {
+        processed.add(file);
+        newCount++;
+      }
+      continue;
+    }
+
+    // If no direct match, try prompt-based matching
     const match = findMatch(file, expectedImages);
 
     if (match) {
@@ -269,9 +294,17 @@ to /public/images/ with correct filenames from MIDJOURNEY_PROMPTS.md
 Usage:
   node monitor-images.js        Watch mode (continuous)
   node monitor-images.js --scan Scan once and exit
+  DEBUG=1 node monitor-images.js --scan  Run with debug output
 
-The script matches Midjourney filenames (which contain prompt parts)
-with expected filenames from MIDJOURNEY_PROMPTS.md
+Matching modes:
+  1. Direct filename match (if image already has correct name)
+     Example: about-team.jpg or about-team.png → about-team.jpg
+
+  2. Prompt-based matching (for Midjourney default names)
+     Example: u9967959759_Professional_cleaner_in_modern_office...png
+     → Matches keywords from prompt → service-cleaning.jpg
+
+The script converts PNG/WebP to JPG automatically using sips (macOS).
 `);
   process.exit(0);
 }
