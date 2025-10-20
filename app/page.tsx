@@ -1,18 +1,46 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Icon from '@/components/Icon';
 
+const HERO_IMAGES = [
+  '/images/hero-home.jpg',
+  '/images/hero-home1.jpg',
+  '/images/hero-home2.jpg',
+];
+
 export default function HomePage() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % HERO_IMAGES.length);
+  };
+
   return (
     <div>
       {/* Hero Section */}
       <section className="hero-section relative bg-deep-navy text-white section">
-        <div className="absolute inset-0 bg-[url('/images/hero-home.jpg')] bg-cover bg-center opacity-50"></div>
+        <div className="absolute inset-0 bg-deep-navy"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-50 transition-opacity duration-500"
+          style={{ backgroundImage: `url('${HERO_IMAGES[currentImageIndex]}')` }}
+        ></div>
+        <button
+          onClick={nextImage}
+          className="absolute top-4 right-4 z-20 bg-primary-steel hover:bg-cool-slate rounded-full p-3 transition-colors flex items-center justify-center w-12 h-12"
+          aria-label="Nächstes Bild"
+        >
+          <Icon name="refresh" className="text-2xl text-white" />
+        </button>
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="heading-1 mb-6 text-white">
               Sicherheit & Sauberkeit für höchste Ansprüche
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-steel">
+            <p className={`text-xl md:text-2xl mb-8 transition-colors duration-500 ${
+              currentImageIndex === 0 ? 'text-primary-steel' : 'text-white'
+            }`}>
               North Pro Services – Ihr Partner für professionelle Reinigungs- und Sicherheitslösungen
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
