@@ -13,10 +13,54 @@ export default function KontaktPage() {
     dsgvo: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    alert('Nachricht wurde versendet! (Demo)');
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          firma: formData.firma,
+          email: formData.email,
+          anliegen: formData.anliegen,
+          nachricht: formData.nachricht,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: '',
+          firma: '',
+          email: '',
+          anliegen: '',
+          nachricht: '',
+          dsgvo: false,
+        });
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage(data.error || 'Ein Fehler ist aufgetreten');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage('Verbindungsfehler. Bitte versuchen Sie es später erneut.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -40,6 +84,34 @@ export default function KontaktPage() {
             <div>
               <h2 className="heading-3 mb-6">Senden Sie uns eine Nachricht</h2>
               <div className="card">
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-start gap-3">
+                    <Icon name="check_circle" className="text-2xl text-green-600 dark:text-green-400 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold text-green-800 dark:text-green-300 mb-1">
+                        Nachricht erfolgreich gesendet!
+                      </h4>
+                      <p className="text-sm text-green-700 dark:text-green-400">
+                        Vielen Dank für Ihre Anfrage. Wir melden uns in Kürze bei Ihnen.
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-start gap-3">
+                    <Icon name="error" className="text-2xl text-red-600 dark:text-red-400 mt-0.5" />
+                    <div>
+                      <h4 className="font-semibold text-red-800 dark:text-red-300 mb-1">
+                        Fehler beim Senden
+                      </h4>
+                      <p className="text-sm text-red-700 dark:text-red-400">
+                        {errorMessage}
+                      </p>
+                    </div>
+                  </div>
+                )}
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-semibold mb-2">Name *</label>
@@ -123,8 +195,22 @@ export default function KontaktPage() {
                     </label>
                   </div>
 
-                  <button type="submit" className="btn-primary w-full">
-                    Nachricht senden
+                  <button
+                    type="submit"
+                    className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Icon name="refresh" className="animate-spin text-xl" />
+                        <span>Wird gesendet...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Icon name="send" className="text-xl" />
+                        <span>Nachricht senden</span>
+                      </>
+                    )}
                   </button>
                 </form>
               </div>

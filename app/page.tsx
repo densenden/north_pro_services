@@ -62,31 +62,35 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
+                id: 'gebaudereinigung',
                 iconName: 'apartment',
                 title: 'Gebäudereinigung',
                 description: 'Professionelle Reinigung für Büros, Praxen und Objekte',
                 image: '/images/service-cleaning.jpg'
               },
               {
+                id: 'sicherheitsdienste',
                 iconName: 'shield',
                 title: 'Sicherheitsdienste',
                 description: 'Objektschutz, Doorman und Streifendienst',
                 image: '/images/service-security.jpg'
               },
               {
+                id: 'hausmeisterservice',
                 iconName: 'handyman',
                 title: 'Hausmeisterservice',
                 description: 'Wartung, Pflege und Kontrolle aus einer Hand',
                 image: '/images/service-facility.jpg'
               },
               {
+                id: 'sonderreinigungen',
                 iconName: 'auto_awesome',
                 title: 'Sonderreinigung',
                 description: 'Baureinigung, Glasreinigung und Desinfektion',
                 image: '/images/service-special.jpg'
               },
             ].map((service, index) => (
-              <div key={index} className="group cursor-pointer overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+              <Link key={index} href={`/leistungen#${service.id}`} className="group cursor-pointer overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 block">
                 <div className="relative h-80 overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
@@ -101,7 +105,7 @@ export default function HomePage() {
                     <p className="text-ice-white text-sm leading-relaxed">{service.description}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

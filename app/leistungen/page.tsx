@@ -3,6 +3,7 @@ import Icon from '@/components/Icon';
 export default function LeistungenPage() {
   const services = [
     {
+      id: 'gebaudereinigung',
       iconName: 'apartment',
       title: 'Gebäudereinigung',
       description: 'Gründliche Reinigung für Büros, Praxen, Objekte – individuell planbar.',
@@ -16,6 +17,7 @@ export default function LeistungenPage() {
       ],
     },
     {
+      id: 'sicherheitsdienste',
       iconName: 'shield',
       title: 'Sicherheitsdienste',
       description: 'Objektschutz, Doorman, Streifendienst – geschult & zuverlässig.',
@@ -29,6 +31,7 @@ export default function LeistungenPage() {
       ],
     },
     {
+      id: 'hausmeisterservice',
       iconName: 'handyman',
       title: 'Hausmeisterservice',
       description: 'Wartung, Pflege, Kontrolle – aus einer Hand.',
@@ -42,6 +45,7 @@ export default function LeistungenPage() {
       ],
     },
     {
+      id: 'sonderreinigungen',
       iconName: 'auto_awesome',
       title: 'Sonderreinigungen',
       description: 'Baureinigung, Glasreinigung, Desinfektion – professionell ausgeführt.',
@@ -76,9 +80,10 @@ export default function LeistungenPage() {
             {services.map((service, index) => (
               <div
                 key={index}
+                id={service.id}
                 className={`flex flex-col ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                } gap-8 items-center`}
+                } gap-8 items-center scroll-mt-20`}
               >
                 <div className="flex-1">
                   <div className="card">
