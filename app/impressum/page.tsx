@@ -30,8 +30,8 @@ export default function ImpressumPage() {
 
               <h3 className="heading-4 mb-3 mt-8">Kontakt</h3>
               <p className="mb-6">
-                <strong>Telefon:</strong> +49 (0) 69 XXX XXXX<br />
-                <strong>E-Mail:</strong> kontakt@northproservices.de
+                <strong>Telefon:</strong> 0731 / 8507 6265<br />
+                <strong>E-Mail:</strong> info@northproservices.de
               </p>
 
               <h3 className="heading-4 mb-3 mt-8">Registereintrag</h3>

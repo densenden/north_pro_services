@@ -42,10 +42,10 @@ export default function DatenschutzPage() {
               <p className="mb-6">
                 Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br /><br />
                 <strong>North Pro Services</strong><br />
-                [Straße und Hausnummer]<br />
-                [PLZ und Ort]<br /><br />
-                Telefon: +49 (0) 69 XXX XXXX<br />
-                E-Mail: kontakt@northproservices.de
+                Himmelweiler 7/1<br />
+                89081 Ulm<br /><br />
+                Telefon: 0731 / 8507 6265<br />
+                E-Mail: info@northproservices.de
               </p>
 
               <h2 className="heading-3 mb-4 mt-8">4. Datenerfassung auf dieser Website</h2>

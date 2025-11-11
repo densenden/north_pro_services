@@ -26,7 +26,7 @@ export default function DesignExportPage() {
             <p>North Pro Services GmbH</p>
             <p>Himmelweiler 7/1</p>
             <p>89081 Ulm</p>
-            <p className="mt-4">kontakt@northproservices.de</p>
+            <p className="mt-4">info@northproservices.de</p>
           </div>
         </div>
       ),
@@ -162,11 +162,11 @@ export default function DesignExportPage() {
                 </div>
                 <div className="flex items-center gap-8 pt-6">
                   <Icon name="email" className="text-8xl" />
-                  <p>kontakt@northproservices.de</p>
+                  <p>info@northproservices.de</p>
                 </div>
                 <div className="flex items-center gap-8">
                   <Icon name="smartphone" className="text-8xl" />
-                  <p>+49 (0) 69 XXX XXXX</p>
+                  <p>0731 / 8507 6265</p>
                 </div>
               </div>
             </div>

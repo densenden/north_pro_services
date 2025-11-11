@@ -62,30 +62,30 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
-                id: 'gebaudereinigung',
+                id: 'reinigung',
                 iconName: 'apartment',
-                title: 'Gebäudereinigung',
+                title: 'Reinigung',
                 description: 'Professionelle Reinigung für Büros, Praxen und Objekte',
                 image: '/images/service-cleaning.jpg'
               },
               {
-                id: 'sicherheitsdienste',
+                id: 'security',
                 iconName: 'shield',
-                title: 'Sicherheitsdienste',
+                title: 'Security',
                 description: 'Objektschutz, Doorman und Streifendienst',
                 image: '/images/service-security.jpg'
               },
               {
-                id: 'hausmeisterservice',
+                id: 'facility-services',
                 iconName: 'handyman',
-                title: 'Hausmeisterservice',
+                title: 'Facility Services',
                 description: 'Wartung, Pflege und Kontrolle aus einer Hand',
                 image: '/images/service-facility.jpg'
               },
               {
                 id: 'sonderreinigungen',
                 iconName: 'auto_awesome',
-                title: 'Sonderreinigung',
+                title: 'Sonderreinigungen',
                 description: 'Baureinigung, Glasreinigung und Desinfektion',
                 image: '/images/service-special.jpg'
               },

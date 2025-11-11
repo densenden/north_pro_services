@@ -56,7 +56,7 @@ export default function Navigation() {
     { href: '/leistungen', label: 'Leistungen' },
     { href: '/app', label: 'NorthPatrol' },
     { href: '/about', label: 'Über uns' },
-    { href: '/jobs', label: 'Jobs' },
+    // { href: '/jobs', label: 'Jobs' }, // Deaktiviert
     { href: '/kontakt', label: 'Kontakt' },
   ];
 

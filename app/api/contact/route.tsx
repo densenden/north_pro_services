@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     // Send email using Resend
     const data = await resend.emails.send({
       from: 'North Pro Services <kontakt@sen.studio>',
-      to: ['kontakt@northproservices.de'],
+      to: ['info@northproservices.de'],
       replyTo: email,
       subject: `Neue Kontaktanfrage: ${anliegen}`,
       html: emailHtml,

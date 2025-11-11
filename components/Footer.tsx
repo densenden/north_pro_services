@@ -35,11 +35,11 @@ export default function Footer() {
                   NorthPatrol
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/jobs" className="text-fog-grey hover:text-white transition-colors">
                   Karriere
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/kontakt" className="text-fog-grey hover:text-white transition-colors">
                   Kontakt
@@ -52,10 +52,10 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Leistungen</h4>
             <ul className="space-y-2 text-fog-grey">
-              <li>Gebäudereinigung</li>
-              <li>Sicherheitsdienste</li>
-              <li>Hausmeisterservice</li>
-              <li>Sonderreinigung</li>
+              <li>Reinigung</li>
+              <li>Security</li>
+              <li>Facility Services</li>
+              <li>Sonderreinigungen</li>
             </ul>
           </div>
 

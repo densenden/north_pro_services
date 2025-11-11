@@ -227,8 +227,8 @@ export const ContactEmailTemplate: React.FC<ContactEmailTemplateProps> = ({
             <Text style={{ margin: '0 0 10px 0', fontSize: '12px', color: '#ECEFF1' }}>
               Himmelweiler 7/1, 89081 Ulm
             </Text>
-            <Link href="mailto:kontakt@northproservices.de" style={{ margin: 0, fontSize: '12px', color: '#758D9D', textDecoration: 'none' }}>
-              kontakt@northproservices.de
+            <Link href="mailto:info@northproservices.de" style={{ margin: 0, fontSize: '12px', color: '#758D9D', textDecoration: 'none' }}>
+              info@northproservices.de
             </Link>
           </Section>
         </Container>

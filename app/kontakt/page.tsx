@@ -240,7 +240,7 @@ export default function KontaktPage() {
                     <div>
                       <h3 className="heading-4 mb-2">E-Mail</h3>
                       <p className="text-gray-700 dark:text-gray-300">
-                        kontakt@northproservices.de
+                        info@northproservices.de
                       </p>
                     </div>
                   </div>
@@ -252,7 +252,7 @@ export default function KontaktPage() {
                     <div>
                       <h3 className="heading-4 mb-2">Telefon</h3>
                       <p className="text-gray-700 dark:text-gray-300">
-                        +49 (0) 69 XXX XXXX
+                        0731 / 8507 6265
                       </p>
                     </div>
                   </div>
@@ -264,9 +264,8 @@ export default function KontaktPage() {
                     <div>
                       <h3 className="heading-4 mb-2">Geschäftszeiten</h3>
                       <p className="text-gray-700 dark:text-gray-300">
-                        Montag - Freitag: 8:00 - 18:00 Uhr<br />
-                        Samstag: 9:00 - 14:00 Uhr<br />
-                        Sonntag: geschlossen
+                        Mo – Do: 8 – 18 Uhr<br />
+                        Fr: 8 – 16 Uhr
                       </p>
                     </div>
                   </div>
@@ -281,13 +280,13 @@ export default function KontaktPage() {
                 </p>
                 <div className="flex flex-col gap-3">
                   <a
-                    href="tel:+4969XXXXXXX"
+                    href="tel:+4973185076265"
                     className="bg-white text-primary-steel font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center"
                   >
                     📞 Jetzt anrufen
                   </a>
                   <a
-                    href="mailto:kontakt@northproservices.de"
+                    href="mailto:info@northproservices.de"
                     className="bg-white/20 backdrop-blur font-semibold py-3 px-6 rounded-lg hover:bg-white/30 transition-colors text-center"
                   >
                     ✉️ E-Mail schreiben
