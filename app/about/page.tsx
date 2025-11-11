@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Icon from '@/components/Icon';
+import LocationMap from '@/components/LocationMap';
 
 export default function AboutPage() {
   return (
@@ -124,10 +125,8 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-            <div className="rounded-xl overflow-hidden shadow-2xl h-96 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-              <p className="text-gray-600 dark:text-gray-400">
-                🗺️ Google Maps Integration
-              </p>
+            <div className="rounded-xl overflow-hidden shadow-2xl h-96">
+              <LocationMap />
             </div>
           </div>
         </div>

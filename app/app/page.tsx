@@ -4,7 +4,7 @@ export default function AppPage() {
   const features = [
     {
       iconName: 'location_on',
-      title: '20 Checkpoints mit QR-Codes',
+      title: 'Checkpoints mit QR-Codes',
       description: 'Definierte Kontrollpunkte im gesamten Objekt',
     },
     {

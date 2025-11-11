@@ -72,6 +72,7 @@ export default function Navigation() {
               width={160}
               height={48}
               className="dark:hidden"
+              style={{ height: 'auto' }}
               priority
             />
             <Image
@@ -80,6 +81,7 @@ export default function Navigation() {
               width={160}
               height={48}
               className="hidden dark:block"
+              style={{ height: 'auto' }}
               priority
             />
           </Link>

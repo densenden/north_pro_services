@@ -273,7 +273,7 @@ export default function KontaktPage() {
               </div>
 
               {/* Quick Contact */}
-              <div className="mt-6 card bg-deep-navy text-white">
+              <div className="mt-6 bg-deep-navy text-white p-8 shadow-lg" style={{ clipPath: 'polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%)' }}>
                 <h3 className="heading-4 mb-4 text-white">Schnelle Anfrage?</h3>
                 <p className="mb-4 text-white">
                   Für dringende Anfragen erreichen Sie uns auch direkt per Telefon oder E-Mail.
@@ -325,7 +325,7 @@ export default function KontaktPage() {
                   <div>
                     <h4 className="font-semibold mb-2">Anfahrt</h4>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
-                      Kostenfreie Parkplätze vor Ort verfügbar. Gut erreichbar über die B10 und B28.
+                      Kostenfreie Parkplätze vor Ort verfügbar. Gut erreichbar über die B10 und die A8.
                     </p>
                   </div>
                 </div>

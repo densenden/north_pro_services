@@ -121,7 +121,7 @@ export default function HomePage() {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {[
-                { iconName: 'smartphone', text: '20 Checkpoints mit QR-Codes' },
+                { iconName: 'smartphone', text: 'Checkpoints mit QR-Codes' },
                 { iconName: 'analytics', text: 'Admin-Dashboard mit Auswertungen' },
                 { iconName: 'notifications', text: 'Benachrichtigung bei Abweichungen' },
               ].map((feature, index) => (
