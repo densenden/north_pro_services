@@ -142,19 +142,15 @@ export default function HomePage() {
       <section className="section bg-white dark:bg-surface-dark">
         <div className="container-custom">
           <h2 className="heading-2 text-center mb-12">Was unsere Kunden sagen</h2>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
                 quote: 'Zuverlässiger Service, immer pünktlich und gründlich. Sehr empfehlenswert!',
-                author: 'Geschäftsführer, Frankfurt',
-              },
-              {
-                quote: 'Die NorthPatrol App hat unsere Sicherheitsrundgänge revolutioniert. Transparenz pur!',
-                author: 'Facility Manager, Eschborn',
+                author: 'Geschäftsführer Süddeutsche Lagerlogistik GmbH',
               },
               {
                 quote: 'Professionelles Team, faire Preise. Wir sind sehr zufrieden mit der Zusammenarbeit.',
-                author: 'Praxisleitung, Bad Homburg',
+                author: 'Geschäftsführer Core Logistic GmbH',
               },
             ].map((testimonial, index) => (
               <div key={index} className="card">

@@ -273,23 +273,23 @@ export default function KontaktPage() {
               </div>
 
               {/* Quick Contact */}
-              <div className="mt-6 card bg-gradient-to-br from-cool-slate to-fog-grey text-white">
-                <h3 className="heading-4 mb-4">Schnelle Anfrage?</h3>
-                <p className="mb-4">
+              <div className="mt-6 card bg-deep-navy text-white">
+                <h3 className="heading-4 mb-4 text-white">Schnelle Anfrage?</h3>
+                <p className="mb-4 text-white">
                   Für dringende Anfragen erreichen Sie uns auch direkt per Telefon oder E-Mail.
                 </p>
                 <div className="flex flex-col gap-3">
                   <a
                     href="tel:+4973185076265"
-                    className="bg-white text-primary-steel font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                    className="btn-primary bg-white text-primary-steel hover:bg-gray-100"
                   >
-                    📞 Jetzt anrufen
+                    Jetzt anrufen
                   </a>
                   <a
                     href="mailto:info@northproservices.de"
-                    className="bg-white/20 backdrop-blur font-semibold py-3 px-6 rounded-lg hover:bg-white/30 transition-colors text-center"
+                    className="btn-outline border-white text-white hover:bg-white hover:text-primary-steel"
                   >
-                    ✉️ E-Mail schreiben
+                    E-Mail schreiben
                   </a>
                 </div>
               </div>
