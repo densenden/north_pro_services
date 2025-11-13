@@ -37,19 +37,14 @@ export default function ImpressumPage() {
               <h3 className="heading-4 mb-3 mt-8">Registereintrag</h3>
               <p className="mb-6">
                 <strong>Eintragung im Handelsregister:</strong><br />
-                Registergericht: [Amtsgericht]<br />
-                Registernummer: [HRB XXXXX]
+                Registergericht: Amtsgericht Ulm<br />
+                Registernummer: HRB 749050
               </p>
 
               <h3 className="heading-4 mb-3 mt-8">Umsatzsteuer-ID</h3>
               <p className="mb-6">
                 Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br />
-                [DE XXX XXX XXX]
-              </p>
-
-              <h3 className="heading-4 mb-3 mt-8">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
-              <p className="mb-6">
-                [Sofern zutreffend]
+                DE450814329
               </p>
 
               <h3 className="heading-4 mb-3 mt-8">EU-Streitschlichtung</h3>
